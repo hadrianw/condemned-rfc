@@ -61,11 +61,11 @@ On error, -1 is returned, and <em>errno</em> is set appropriately.
 <dt><em>EINVAL</em>
 <dd>
 <em>signal</em> is not a valid signal number
-or <em>timeout</em> is a negative number
+or <em>timeout</em> is a negative number.
 
 <dt><em>EINTR</em>
 <dd>
-A signal occurred before any requested event
+A signal occurred before the timeout interval passed.
 </dl>
 
 <dt>RATIONALE
