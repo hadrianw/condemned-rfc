@@ -39,11 +39,11 @@ the maximal interval in miliseconds to wait until there are no descendant
 processes.
 <p>
 <strong>killbelow()</strong> is most useful if a process calling it
-is a reaper for it's descendant processes. Reaper status can be aquired
+is a reaper for its descendant processes. Reaper status can be aquired
 by using <a href="https://www.dragonflybsd.org/cgi/web-man?command=procctl&amp;section=2">procctl(2)</a> with <em>PROC_REAP_ACQUIRE</em> or <a href="http://man7.org/linux/man-pages/man2/prctl.2.html">prctl(2)</a>
 with <em>PR_SET_CHILD_SUBREAPER</em>.
 <p>
-Signal will be delivered to every descendant process even if it's user ID
+Signal will be delivered to every descendant process even if its user ID
 is different from the process calling <strong>killbelow()</strong>.
 
 <dt>RETURN VALUE
@@ -70,9 +70,9 @@ A signal occurred before the timeout interval passed.
 
 <dt>RATIONALE
 <dd><p>
-Unprivileged processes don't have instruments to reliably terminate all it's
+Unprivileged processes don't have instruments to reliably terminate all its
 descendant processes. That functionality is especially missing in scripts.
-A script can have processes in it's sub-process tree, that have different
+A script can have processes in its sub-process tree, that have different
 user ID aquired by calling
 <a href="http://man.he.net/?topic=sudo&section=all">sudo(1)</a>/<a href="http://man.openbsd.org/doas">doas(1)</a>. However it can't even terminate
 such processes.
