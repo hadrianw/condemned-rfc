@@ -74,12 +74,12 @@ Unprivileged processes don't have instruments to reliably terminate all its
 descendant processes. That functionality is especially missing in scripts.
 A script can have processes in its sub-process tree, that have different
 user ID aquired by calling
-<a href="http://man.he.net/?topic=sudo&section=all">sudo(1)</a>/<a href="http://man.openbsd.org/doas">doas(1)</a>. However it can't even terminate
+<a href="http://man.he.net/?topic=sudo&amp;section=all">sudo(1)</a>/<a href="http://man.openbsd.org/doas">doas(1)</a>. However it can't even terminate
 such processes.
 <p>
 <a href="http://man7.org/linux/man-pages/man2/chroot.2.html">chroot(2)</a>,
 <a href="http://man7.org/linux/man-pages/man7/cgroups.7.html">cgroups(7)</a>
-and <a href="https://www.freebsd.org/cgi/man.cgi?query=jail&sektion=&n=1">jail(8)</a>
+and <a href="https://www.freebsd.org/cgi/man.cgi?query=jail&amp;sektion=&n=1">jail(8)</a>
 usually need higher privileges or interfacing with a separate daemon.
 
 <dt>NOTES
@@ -100,7 +100,7 @@ if (killbelow(SIGTERM, 5000) &gt; 0) {<br>
 <dd><p>
 <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/kill.html">kill(2)</a>,
 <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/signal.html">signal(2)</a>,
-<a href="http://man7.org/linux/man-pages/man2/prctl.2.html">prctl(2)</a>/<a href="https://www.dragonflybsd.org/cgi/web-man?command=procctl&section=2">procctl(2)</a>
+<a href="http://man7.org/linux/man-pages/man2/prctl.2.html">prctl(2)</a>/<a href="https://www.dragonflybsd.org/cgi/web-man?command=procctl&amp;section=2">procctl(2)</a>
 
 <dt>CONDEMNED TO
 <dd><p>reinvent it, poorly.
