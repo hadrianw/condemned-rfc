@@ -82,6 +82,13 @@ such processes.
 <a href="http://man7.org/linux/man-pages/man7/cgroups.7.html">cgroups(7)</a>
 and <a href="https://www.freebsd.org/cgi/man.cgi?query=jail&amp;sektion=&n=1">jail(8)</a>
 usually need higher privileges or interfacing with a separate daemon.
+<p>
+Process groups and sessions are not a solution, because every process can call
+<a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/setpgid.html">setpgid(2)</a>
+or <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/setsid.html">setsid(2)</a>.
+<p>
+On Linux a partial solution, that should cover most cases is to use
+<a href="http://man7.org/linux/man-pages/man7/pid_namespaces.7.html">pid_namespaces(7)</a>.
 
 <dt>NOTES
 <dd><p>
